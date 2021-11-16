@@ -10,6 +10,8 @@ mongoose.connect("mongodb://127.0.0.1:27017/money", { useNewUrlParser: true,u
 var indexRouter = require('./routes/index');
 var regRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
+var menuRouter = require('./routes/menu');
+var rolesRouter = require('./routes/roles');
 
 var app = express();
 
@@ -26,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/v1/register', regRouter);
 app.use('/v1/login', loginRouter);
+app.use('/v1/menu', menuRouter);
+app.use('/v1/roles', rolesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

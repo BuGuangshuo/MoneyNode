@@ -1,14 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var mongoose = require("mongoose")
-
-var UserModel = mongoose.model("users", new mongoose.Schema({
-  username: String,
-  password: String,
-  infoname: String,
-  level: Number
-}))
+var { UserModel } = require("./models")
 
 /* GET users listing. */
 router.post('/', function (req, res, next) {
