@@ -3,7 +3,7 @@ var router = express.Router();
 
 var { UserModel } = require("./models")
 
-/* GET users listing. */
+/* 注册接口 */
 router.post('/', function (req, res, next) {
   const UserData = {
     username: req.body.username,
