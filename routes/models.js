@@ -4,7 +4,7 @@ const UserModel = mongoose.model("users", new mongoose.Schema({
   username: String,
   password: String,
   infoname: String,
-  level: Number
+  level: Number,
 }))
 
 const RoleModel = mongoose.model("roles", new mongoose.Schema({

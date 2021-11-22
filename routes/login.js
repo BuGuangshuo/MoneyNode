@@ -4,7 +4,7 @@ var router = express.Router();
 var { UserModel } = require('./models')
 
 /* GET users listing. */
-router.post('/', function (req, res, next) {
+router.post('/', function (req, res) {
   const UserData = {
     username: req.body.username,
     password: req.body.password,
